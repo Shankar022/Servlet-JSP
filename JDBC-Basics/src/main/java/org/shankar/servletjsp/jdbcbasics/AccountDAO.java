@@ -8,7 +8,10 @@ public class AccountDAO {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/mydb", "root", "root12345");
             System.out.println(connection);
             Statement statement = connection.createStatement();
-            int executed = statement.executeUpdate("insert into account values (123, 'Shankar', 'Chakraborty', 10000)");
+//            int executed = statement.executeUpdate("insert into account values (123, 'Shankar', 'Chakraborty', 10000)");
+//            System.out.println(executed + " rows got affected");
+
+            int executed = statement.executeUpdate("update account set bal=50000 where accno=123");
             System.out.println(executed + " rows got affected");
         } catch (SQLException e) {
             e.printStackTrace();

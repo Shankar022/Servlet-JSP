@@ -6,8 +6,9 @@ import jakarta.servlet.GenericServlet;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
+import jakarta.servlet.annotation.WebServlet;
 
-
+@WebServlet(name = "Hello Servlet", urlPatterns = "/hello")
 public class HelloServlet extends GenericServlet{
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
